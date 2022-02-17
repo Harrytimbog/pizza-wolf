@@ -95,7 +95,7 @@ const Cart = () => {
     <div className={styles.container}>
       <div className={styles.left}>
         <table className={styles.table}>
-          <tbody>
+          <thead>
             <tr className={styles.trTitle}>
               <th>Product</th>
               <th>Name</th>
@@ -104,7 +104,7 @@ const Cart = () => {
               <th>Quantity</th>
               <th>Total</th>
             </tr>
-          </tbody>
+          </thead>
           <tbody>
             {cart.products.map((product) => (
               <tr className={styles.tr} key={product._id}>
