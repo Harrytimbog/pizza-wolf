@@ -39,7 +39,6 @@
     height: auto;
     text-align: center;
   }
-
   .item:first-child {
     display: none;
   }

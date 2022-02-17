@@ -11,10 +11,10 @@ const handler = async (req, res) => {
 
   if (method === 'GET') {
     try {
-      const order = Order.findById(id);
+      const order = await Order.findById(id);
       res.status(200).json(order);
-    } catch (error) {
-      res.status(500).json(error);
+    } catch (err) {
+      res.status(500).json(err);
     }
   }
   if (method === 'PUT') {
@@ -22,3 +22,5 @@ const handler = async (req, res) => {
   if (method === 'DELETE') {
   }
 };
+
+export default handler;

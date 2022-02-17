@@ -21,7 +21,6 @@ const Cart = () => {
   const style = { layout: 'vertical' };
   const dispatch = useDispatch();
   const router = useRouter();
-  console.log(open);
 
   const createOrder = async (data) => {
     try {
@@ -167,8 +166,8 @@ const Cart = () => {
               </button>
               <PayPalScriptProvider
                 options={{
-                  // 'client-id': 'test',
-                  'client-id': process.env.PAYPAL_CLIENT_ID,
+                  'client-id':
+                    'AcNy4ZgYYC4eFwvEO9ttAc7Lk4TOiSZipxE3wrm-riF_iiPeQ8JgJV_jBGDwWfjUFsCeNLhumJHS6GXx',
                   components: 'buttons',
                   currency: 'USD',
                   'disable-funding': 'credit,card,p24',
