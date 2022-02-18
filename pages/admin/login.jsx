@@ -11,7 +11,7 @@ const Login = () => {
 
   const handleClick = async () => {
     try {
-      await axios.post('${process.env.BASE_URL}/api/login', {
+      await axios.post(`/api/login`, {
         username,
         password,
       });
