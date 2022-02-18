@@ -44,7 +44,10 @@ const Add = ({ setClose }) => {
         image: url,
       };
 
-      await axios.post(`/api/products`, newProduct);
+      await axios.post(
+        `https://pizza-wolf.vercel.app/api/products`,
+        newProduct
+      );
       setClose(true);
     } catch (err) {
       console.log(err);

@@ -10,7 +10,9 @@ const Index = ({ orders, products }) => {
 
   const handleDelete = async (id) => {
     try {
-      const res = await axios.delete(`/api/products/` + id);
+      const res = await axios.delete(
+        `https://pizza-wolf.vercel.app/api/products/` + id
+      );
       setPizzaList(pizzaList.filter((pizza) => pizza._id !== id));
     } catch (error) {
       console.log(error);
@@ -21,9 +23,12 @@ const Index = ({ orders, products }) => {
     const item = orderList.filter((order) => order._id === id)[0];
     const currentStatus = item.status;
     try {
-      const res = await axios.put(`/api/orders/` + id, {
-        status: currentStatus + 1,
-      });
+      const res = await axios.put(
+        `https://pizza-wolf.vercel.app/api/orders/` + id,
+        {
+          status: currentStatus + 1,
+        }
+      );
       setOrderList([
         res.data,
         ...orderList.filter((order) => order._id !== id),
@@ -123,8 +128,10 @@ export const getServerSideProps = async (ctx) => {
     };
   }
 
-  const productRes = await axios.get(`/api/products`);
-  const orderRes = await axios.get(`/api/orders`);
+  const productRes = await axios.get(
+    `https://pizza-wolf.vercel.app/api/products`
+  );
+  const orderRes = await axios.get(`https://pizza-wolf.vercel.app/api/orders`);
 
   return {
     props: {

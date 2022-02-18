@@ -96,7 +96,9 @@ const Product = ({ pizza }) => {
 };
 
 export const getServerSideProps = async ({ params }) => {
-  const res = await axios.get(`/api/products/${params.id}`);
+  const res = await axios.get(
+    `https://pizza-wolf.vercel.app/api/products/${params.id}`
+  );
   return {
     props: {
       pizza: res.data,
