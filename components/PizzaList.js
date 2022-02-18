@@ -6,11 +6,11 @@ const PizzaList = ({ pizzaList }) => {
     <div className={styles.container}>
       <h1 className={styles.title}>THE BEST PIZZA IN TOWN</h1>
       <p className={styles.desc}>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+        Good time, Great taste Expect the best Eat healthy, Live more Food,
+        Folks and Fun | Good time, Great taste Expect the best Eat healthy, Live
+        more Food, Folks and Fun | Deliciousness jumping into the mouth You
+        deserve a break today As nature teaches us We do chicken right Chase the
+        flavors Finger Lickin | Oasis of pleasure
       </p>
       <div className={styles.wrapper}>
         {pizzaList.map((pizza) => (
